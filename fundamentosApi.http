@@ -1,0 +1,6 @@
+@fundamentosApi_HostAddress = http://localhost:5232
+
+GET {{fundamentosApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
