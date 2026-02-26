@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Text.Json.Serialization;
 
 namespace fundamentosApi.Entities
 {
@@ -12,6 +13,8 @@ namespace fundamentosApi.Entities
         public string Email { get; set; }
         public bool AceitaComunicado { get; set; }
         public DateTime DataCadastro { get; set; }
+        // Ignora a propriedade Contatos na serialização JSON
+        [JsonIgnore]
         public ICollection<Contatos> Contatos { get; set; } = new List<Contatos>();
     }
 }

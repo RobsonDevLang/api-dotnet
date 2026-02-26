@@ -86,7 +86,7 @@ Controller: `ContatosController` (`/Contatos`)
 - **GET `/Contatos/{id}`**  
   Retorna um contato específico pelo `id`.
 
-- **GET `/Contatos/SelecionarPorNomeContato/{nome}`**  
+- **GET `/Contatos/SelecionarPorNome/{nome}`**  
   Retorna contatos cujo nome contenha o valor informado em `{nome}`.
 
 - **POST `/Contatos`**  
@@ -99,6 +99,30 @@ Controller: `ContatosController` (`/Contatos`)
   Atualização parcial dos dados de um contato (somente propriedades enviadas).
 
 - **DELETE `/Contatos/{id}`**  
+  Remove um contato.
+
+
+  Controller: `ClientesController` (`/Clientes`)
+
+- **GET `/Clientes`**  
+  Retorna todos os Clientes.
+
+- **GET `/Clientes/{id}`**  
+  Retorna um contato específico pelo `id`.
+
+- **GET `/Clientes/SelecionarPorNome/{nome}`**  
+  Retorna contatos cujo nome contenha o valor informado em `{nome}`.
+
+- **POST `/Clientes`**  
+  Cria um novo contato.
+
+- **PUT `/Clientes/{id}`**  
+  Atualiza completamente os dados de um contato existente.
+
+- **PATCH `/Clientes/{id}`**  
+  Atualização parcial dos dados de um contato (somente propriedades enviadas).
+
+- **DELETE `/Clientes/{id}`**  
   Remove um contato.
 
 ### Estrutura básica do projeto

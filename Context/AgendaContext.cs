@@ -15,5 +15,6 @@ namespace fundamentosApi.Context
         }
         
         public DbSet<Contatos> Contatos { get; set; }
+        public DbSet<Clientes> Clientes { get; set; }
     }
 }

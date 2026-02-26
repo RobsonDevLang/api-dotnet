@@ -2,6 +2,7 @@
 using fundamentosApi.Context;
 using fundamentosApi.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace fundamentosApi.Controllers
 {
@@ -19,7 +20,7 @@ namespace fundamentosApi.Controllers
         [HttpGet]
         public IActionResult SelecionarTodos()
         {
-            var contatos = _contex.Contatos.ToList();
+        var contatos = _contex.Contatos.Include(c => c.Cliente).ToList();
             return Ok(contatos);
         }
 
@@ -40,8 +41,8 @@ namespace fundamentosApi.Controllers
             return Ok(contato);
         }
 
-        [HttpGet("SelecionarPorNomeContato/{nome}")]
-        public IActionResult SelecionarPorNomeContato(string nome)
+        [HttpGet("SelecionarPorNome/{nome}")]
+        public IActionResult SelecionarPorNome(string nome)
         {
             var contato = _contex.Contatos.Where(x => x.Nome.Contains(nome));
             if (contato == null) { return NotFound(); }
