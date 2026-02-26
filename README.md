@@ -51,6 +51,10 @@ No arquivo `appsettings.json`, ajuste a connection string `ConexaoPadrao` para a
 Se tiver o `dotnet-ef` instalado:
 
 ```bash
+dotnet tool install --global dotnet-ef
+
+ou para atualizar:
+
 dotnet ef database update
 ```
 
